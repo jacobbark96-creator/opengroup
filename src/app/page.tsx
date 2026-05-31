@@ -9,12 +9,12 @@ import { LogoCarousel } from "@/components/common/LogoCarousel";
 
 export default function Home() {
   const partners = [
-    { name: "GLOBAL TECH" },
-    { name: "NEXUS CORP" },
-    { name: "AERO SPACE" },
-    { name: "ECO ENERGY" },
-    { name: "PRIME LOGISTICS" },
-    { name: "VORTEX LTD" }
+    { name: "Microsoft", url: "https://www.vectorlogo.zone/logos/microsoft/microsoft-ar21.svg" },
+    { name: "Google", url: "https://www.vectorlogo.zone/logos/google/google-ar21.svg" },
+    { name: "Amazon", url: "https://www.vectorlogo.zone/logos/amazon/amazon-ar21.svg" },
+    { name: "Salesforce", url: "https://www.vectorlogo.zone/logos/salesforce/salesforce-ar21.svg" },
+    { name: "Oracle", url: "https://www.vectorlogo.zone/logos/oracle/oracle-ar21.svg" },
+    { name: "IBM", url: "https://www.vectorlogo.zone/logos/ibm/ibm-ar21.svg" }
   ];
 
   const featured = [

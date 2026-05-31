@@ -41,12 +41,12 @@ export function LogoCarousel({ title, logos, reverse = false }: LogoCarouselProp
             repeat: Infinity,
             ease: "linear",
           }}
-          className="flex whitespace-nowrap gap-16 md:gap-32 items-center"
+          className="flex whitespace-nowrap gap-8 md:gap-16 items-center"
         >
           {duplicatedLogos.map((logo, index) => (
             <div
               key={`${logo.name}-${index}`}
-              className="flex items-center justify-center min-w-[120px] md:min-w-[200px]"
+              className="flex items-center justify-center min-w-[100px] md:min-w-[150px]"
             >
               {logo.url && !failedLogos[logo.name] ? (
                 <img
