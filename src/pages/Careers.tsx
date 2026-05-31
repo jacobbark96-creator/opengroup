@@ -1,8 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Briefcase, GraduationCap, Users, Rocket } from "lucide-react";
-import Link from "next/link";
 
 export default function Careers() {
   return (
@@ -29,12 +26,12 @@ export default function Careers() {
           <p className="text-2xl text-gray-200 max-w-2xl mx-auto mb-12 font-light italic">
             "Join a dynamic group of brands where innovation and collaboration are at the heart of everything we do."
           </p>
-          <Link
+          <a
             href="#openings"
             className="bg-primary text-black px-10 py-5 rounded-2xl font-bold hover:bg-white transition-all duration-300 shadow-[0_20px_40px_rgba(0,242,255,0.3)]"
           >
             Explore Open Positions
-          </Link>
+          </a>
         </div>
       </section>
 

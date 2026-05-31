@@ -25,10 +25,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
-/* Custom Utilities */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}

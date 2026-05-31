@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { GROUP_MISSION } from "@/constants/brands";
 import { Target, Compass, Award, Heart } from "lucide-react";

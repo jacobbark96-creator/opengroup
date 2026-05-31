@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 
@@ -100,7 +98,6 @@ export default function Contact() {
                   <option>OpenSpace</option>
                   <option>OpenComms</option>
                   <option>OpenTech</option>
-                  {/* ... other brands ... */}
                 </select>
               </div>
               <div className="space-y-2">

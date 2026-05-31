@@ -1,5 +1,3 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Leaf, Recycle, Globe, Wind } from "lucide-react";
 

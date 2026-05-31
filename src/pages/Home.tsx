@@ -1,10 +1,8 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { BRANDS, GROUP_MISSION } from "@/constants/brands";
 import { BrandCard } from "@/components/brands/BrandCard";
 import { ArrowRight, Shield, Zap, Users } from "lucide-react";
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { LogoCarousel } from "@/components/common/LogoCarousel";
 
 export default function Home() {
@@ -68,17 +66,17 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center justify-center gap-6"
             >
               <Link
-                href="/mission"
+                to="/mission"
                 className="group bg-primary text-black px-10 py-5 rounded-2xl font-bold hover:bg-white transition-all duration-300 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,242,255,0.3)]"
               >
                 Our Strategic Vision <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <a
                 href="#brands"
                 className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300"
               >
                 Portfolio Overview
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>

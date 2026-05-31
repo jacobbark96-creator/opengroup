@@ -1,6 +1,4 @@
-"use client";
-
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -34,7 +32,7 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="group flex items-center space-x-1">
+        <Link to="/" className="group flex items-center space-x-1">
           <span className="font-display font-bold text-2xl tracking-tighter text-black">
             The Open Group
           </span>
@@ -46,14 +44,14 @@ export function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={link.href}
+              to={link.href}
               className="text-sm font-medium hover:text-primary transition-colors"
             >
               {link.name}
             </Link>
           ))}
           <Link
-            href="/contact"
+            to="/contact"
             className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-primary hover:text-black transition-all"
           >
             Get in Touch
@@ -79,7 +77,7 @@ export function Navbar() {
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="text-lg font-medium"
                 >

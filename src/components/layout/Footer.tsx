@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "react-router-dom";
 import { GROUP_MISSION } from "@/constants/brands";
 
 export function Footer() {
@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-black text-white py-16 px-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2">
-          <Link href="/" className="group flex items-center space-x-1 mb-6">
+          <Link to="/" className="group flex items-center space-x-1 mb-6">
             <span className="font-display font-bold text-3xl tracking-tighter text-white">
               The Open Group
             </span>
@@ -29,10 +29,10 @@ export function Footer() {
         <div>
           <h4 className="font-bold mb-6">Explore</h4>
           <ul className="space-y-4 text-gray-400">
-            <li><Link href="/" className="hover:text-primary transition-colors">Home</Link></li>
-            <li><Link href="/sustainability" className="hover:text-primary transition-colors">Sustainability</Link></li>
-            <li><Link href="/mission" className="hover:text-primary transition-colors">Mission</Link></li>
-            <li><Link href="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
+            <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+            <li><Link to="/sustainability" className="hover:text-primary transition-colors">Sustainability</Link></li>
+            <li><Link to="/mission" className="hover:text-primary transition-colors">Mission</Link></li>
+            <li><Link to="/careers" className="hover:text-primary transition-colors">Careers</Link></li>
           </ul>
         </div>
 
