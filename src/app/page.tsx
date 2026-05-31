@@ -18,12 +18,12 @@ export default function Home() {
   ];
 
   const featured = [
-    { name: "Forbes", url: "https://upload.wikimedia.org/wikipedia/commons/0/04/Forbes_logo.svg" },
-    { name: "TechCrunch", url: "https://upload.wikimedia.org/wikipedia/commons/b/b1/TechCrunch_logo.svg" },
-    { name: "Wired", url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Wired_logo.svg" },
-    { name: "The Times", url: "https://upload.wikimedia.org/wikipedia/commons/7/77/The_Times_logo.svg" },
-    { name: "Business Insider", url: "https://upload.wikimedia.org/wikipedia/commons/e/e1/Business_Insider_Logo.svg" },
-    { name: "Bloomberg", url: "https://upload.wikimedia.org/wikipedia/commons/5/5e/Bloomberg_logo.svg" }
+    { name: "Forbes", url: "https://www.vectorlogo.zone/logos/forbes/forbes-ar21.svg" },
+    { name: "TechCrunch", url: "https://www.vectorlogo.zone/logos/techcrunch/techcrunch-ar21.svg" },
+    { name: "Wired", url: "https://www.vectorlogo.zone/logos/wired/wired-ar21.svg" },
+    { name: "The Times", url: "https://www.vectorlogo.zone/logos/the_times/the_times-ar21.svg" },
+    { name: "Business Insider", url: "https://www.vectorlogo.zone/logos/businessinsider/businessinsider-ar21.svg" },
+    { name: "Bloomberg", url: "https://www.vectorlogo.zone/logos/bloomberg/bloomberg-ar21.svg" }
   ];
 
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { useState } from "react";
 
 interface LogoItem {
   name: string;
@@ -15,8 +15,14 @@ interface LogoCarouselProps {
 }
 
 export function LogoCarousel({ title, logos, reverse = false }: LogoCarouselProps) {
+  const [failedLogos, setFailedLogos] = useState<Record<string, boolean>>({});
+
   // Duplicate logos for seamless infinite scroll
   const duplicatedLogos = [...logos, ...logos, ...logos];
+
+  const handleImageError = (name: string) => {
+    setFailedLogos((prev) => ({ ...prev, [name]: true }));
+  };
 
   return (
     <div className="py-12 bg-white overflow-hidden">
@@ -39,17 +45,18 @@ export function LogoCarousel({ title, logos, reverse = false }: LogoCarouselProp
         >
           {duplicatedLogos.map((logo, index) => (
             <div
-              key={index}
-              className="flex items-center justify-center grayscale opacity-30 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-default select-none"
+              key={`${logo.name}-${index}`}
+              className="flex items-center justify-center min-w-[120px] md:min-w-[200px]"
             >
-              {logo.url ? (
+              {logo.url && !failedLogos[logo.name] ? (
                 <img
                   src={logo.url}
                   alt={logo.name}
-                  className="h-8 md:h-12 w-auto object-contain"
+                  className="h-8 md:h-12 w-auto object-contain grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer"
+                  onError={() => handleImageError(logo.name)}
                 />
               ) : (
-                <span className="text-2xl md:text-4xl font-display font-black text-gray-200 tracking-tighter">
+                <span className="text-xl md:text-2xl font-display font-black text-gray-300 tracking-tighter hover:text-primary transition-colors cursor-default select-none">
                   {logo.name}
                 </span>
               )}
