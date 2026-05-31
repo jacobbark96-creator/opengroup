@@ -6,6 +6,7 @@ import path from 'path'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
+// Cloudflare Pages Deployment Trigger
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
