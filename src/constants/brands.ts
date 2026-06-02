@@ -3,6 +3,7 @@ export interface Brand {
   name: string;
   tagline: string;
   description: string;
+  url?: string;
 }
 
 export const BRANDS: Brand[] = [
@@ -28,7 +29,8 @@ export const BRANDS: Brand[] = [
     id: "openenergy",
     name: "OpenEnergy",
     tagline: "Powering a Sustainable Future Together.",
-    description: "Clean energy solutions that empower businesses to transition to sustainable power sources effectively."
+    description: "Clean energy solutions that empower businesses to transition to sustainable power sources effectively.",
+    url: "https://openenergyservices.co.uk"
   },
   {
     id: "openworks",
@@ -82,13 +84,15 @@ export const BRANDS: Brand[] = [
     id: "openlead",
     name: "Openlead",
     tagline: "The Smarter Way To Source New Business.",
-    description: "Advanced lead generation and market intelligence tools that streamline business development."
+    description: "Advanced lead generation and market intelligence tools that streamline business development.",
+    url: "https://openlead.co.uk"
   },
   {
     id: "openacademy",
     name: "OpenAcademy",
     tagline: "Developing People. Building Brighter Futures.",
-    description: "Corporate training and development programs focused on nurturing talent and fostering future leaders."
+    description: "Corporate training and development programs focused on nurturing talent and fostering future leaders.",
+    url: "https://openleadacademy.co.uk"
   }
 ];
 
