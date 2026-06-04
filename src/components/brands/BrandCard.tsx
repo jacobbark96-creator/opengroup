@@ -15,32 +15,33 @@ export function BrandCard({ brand, index }: BrandCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      className="group bg-white p-10 border border-gray-100 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border-primary/30 transition-all duration-500 rounded-[2rem] flex flex-col items-center text-center relative overflow-hidden h-full cursor-pointer"
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="group bg-white p-6 border border-gray-100 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:shadow-[0_15px_30px_rgba(0,242,255,0.1)] hover:border-primary/40 transition-all duration-500 rounded-3xl flex flex-col items-center text-center relative overflow-hidden h-full cursor-pointer z-10"
     >
-      <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-bl-[4rem] -mr-8 -mt-8 group-hover:bg-primary/10 transition-colors duration-500" />
+      <div className="absolute top-0 right-0 w-16 h-16 bg-primary/5 rounded-bl-[2rem] -mr-4 -mt-4 group-hover:bg-primary/20 group-hover:scale-150 transition-all duration-700 ease-out" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
-      <div className="flex items-center space-x-1 mb-3">
-        <h3 className="font-display font-bold text-3xl text-black tracking-tight">{brand.name}</h3>
-        <span className="w-2 h-2 bg-primary rounded-full mt-1.5 shadow-[0_0_8px_rgba(0,242,255,0.4)]" />
+      <div className="flex items-center space-x-1 mb-2 relative z-10">
+        <h3 className="font-display font-bold text-2xl text-black tracking-tight">{brand.name}</h3>
+        <span className={`w-1.5 h-1.5 rounded-full mt-1.5 group-hover:scale-150 transition-transform duration-300 ${brand.id === 'openenergy' ? 'bg-orange-500 shadow-[0_0_8px_rgba(249,115,22,0.6)]' : 'bg-primary shadow-[0_0_8px_rgba(0,242,255,0.6)]'}`} />
       </div>
       
-      <p className="text-gray-400 font-medium text-xs uppercase tracking-[0.2em] mb-6 leading-relaxed px-4">
+      <p className="text-gray-400 font-semibold text-[9px] uppercase tracking-[0.2em] mb-4 leading-relaxed px-2 relative z-10">
         {brand.tagline}
       </p>
       
-      <div className="w-full h-[1px] bg-gray-100 mb-6 group-hover:bg-primary/20 transition-colors" />
+      <div className="w-12 h-[2px] bg-gray-100 mb-4 group-hover:bg-primary group-hover:w-full transition-all duration-500 relative z-10" />
       
-      <p className="text-gray-500 text-sm leading-relaxed line-clamp-3 group-hover:text-gray-700 transition-colors flex-grow">
+      <p className="text-gray-500 text-xs leading-relaxed line-clamp-2 group-hover:text-gray-800 transition-colors flex-grow relative z-10">
         {brand.description}
       </p>
       
       <motion.div 
-        initial={{ opacity: 0 }}
-        whileHover={{ opacity: 1 }}
-        className="mt-6 text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2"
+        initial={{ opacity: 0.7 }}
+        whileHover={{ opacity: 1, x: 5 }}
+        className="mt-4 text-primary text-[10px] font-bold uppercase tracking-widest flex items-center gap-1.5 relative z-10"
       >
-        {brand.url ? "Visit Website" : "Learn More"} <span className="text-lg">→</span>
+        {brand.url ? "Visit Website" : "Learn More"} <span className="text-sm">→</span>
       </motion.div>
     </motion.div>
   );

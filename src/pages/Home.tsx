@@ -27,7 +27,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black px-6">
+      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-black px-6">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=modern+corporate+architecture+glass+facade+cyan+accents+professional+minimalist+luxury+office+building&image_size=landscape_16_9"
@@ -39,22 +39,22 @@ export default function Home() {
           <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/10 rounded-full blur-[120px] animate-pulse delay-1000" />
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <div className="relative z-10 max-w-7xl mx-auto text-center mt-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col items-center"
           >
-            <h1 className="font-display text-7xl md:text-[10rem] font-black tracking-tighter text-white mb-4 leading-[0.85]">
-              The Open<br />Group<span className="text-primary inline-block ml-2 w-6 h-6 md:w-10 md:h-10 bg-primary rounded-full shadow-[0_0_30px_rgba(0,242,255,1)]" />
+            <h1 className="font-display text-6xl md:text-[8rem] font-black tracking-tighter text-white mb-4 leading-[0.85]">
+              The Open<br />Group<span className="text-primary inline-block ml-2 w-5 h-5 md:w-8 md:h-8 bg-primary rounded-full shadow-[0_0_30px_rgba(0,242,255,1)]" />
             </h1>
             
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
-              className="text-2xl md:text-3xl text-gray-200 font-light mb-16 tracking-tight max-w-3xl mx-auto italic"
+              className="text-xl md:text-2xl text-gray-200 font-light mb-12 tracking-tight max-w-2xl mx-auto italic"
             >
               "{GROUP_MISSION}"
             </motion.p>
@@ -63,17 +63,17 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-6"
+              className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <Link
                 to="/mission"
-                className="group bg-primary text-black px-10 py-5 rounded-2xl font-bold hover:bg-white transition-all duration-300 flex items-center gap-3 shadow-[0_20px_40px_rgba(0,242,255,0.3)]"
+                className="group bg-primary text-black px-8 py-4 rounded-xl font-bold hover:bg-white transition-all duration-300 flex items-center gap-3 shadow-[0_10px_30px_rgba(0,242,255,0.3)] text-sm"
               >
-                Our Strategic Vision <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                Our Strategic Vision <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#brands"
-                className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-10 py-5 rounded-2xl font-bold hover:bg-white hover:text-black transition-all duration-300"
+                className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-all duration-300 text-sm"
               >
                 Portfolio Overview
               </a>
@@ -85,10 +85,10 @@ export default function Home() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-gray-400">Scroll to Explore</span>
-          <div className="w-[1px] h-12 bg-gradient-to-b from-primary to-transparent" />
+          <span className="text-[9px] font-bold uppercase tracking-[0.5em] text-gray-400">Scroll to Explore</span>
+          <div className="w-[1px] h-8 bg-gradient-to-b from-primary to-transparent" />
         </motion.div>
       </section>
 
@@ -96,18 +96,18 @@ export default function Home() {
       <LogoCarousel title="Trusted by Global Leaders" logos={partners} />
 
       {/* Brands Grid Section */}
-      <section id="brands" className="py-32 px-6 bg-[#fafafa] relative overflow-hidden">
+      <section id="brands" className="py-20 px-6 bg-[#fafafa] relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.01] pointer-events-none"
              style={{ backgroundImage: 'linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000), linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000)', backgroundSize: '60px 60px', backgroundPosition: '0 0, 30px 30px' }} />
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div className="max-w-2xl">
               <motion.span 
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="text-primary font-bold text-xs uppercase tracking-[0.4em] mb-4 block"
+                className="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-3 block"
               >
                 Sector Leadership
               </motion.span>
@@ -115,17 +115,17 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="font-display text-5xl md:text-6xl font-bold text-black"
+                className="font-display text-4xl md:text-5xl font-bold text-black"
               >
                 Global Brand Portfolio
               </motion.h2>
             </div>
-            <p className="text-gray-400 text-lg max-w-md font-light leading-relaxed">
+            <p className="text-gray-400 text-base max-w-md font-light leading-relaxed">
               Fourteen specialized entities working in synergy to provide comprehensive business infrastructure across the globe.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {BRANDS.map((brand, index) => (
               <BrandCard key={brand.id} brand={brand} index={index} />
             ))}
@@ -137,7 +137,7 @@ export default function Home() {
       <LogoCarousel title="As Featured In" logos={featured} reverse={true} />
 
       {/* Features/Stats Section */}
-      <section className="py-24 px-6 bg-white">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary">
